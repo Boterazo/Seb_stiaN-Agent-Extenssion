@@ -19,7 +19,7 @@ Encriptar = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 SECRET_KEY = os.getenv("SECRET_KEY", "123456789")
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 1
+ACCESS_TOKEN_EXPIRE_MINUTES = 24*60
 
 
 def crear_token(email: str, Tiempo_expiracion=ACCESS_TOKEN_EXPIRE_MINUTES):
